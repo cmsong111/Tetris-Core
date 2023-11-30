@@ -7,7 +7,6 @@ class TetrisGame
 {
 private:
     GameBoard gameBoard; // 게임 보드를 나타내는 변수
-    bool isplaying;      // 게임이 진행중인지 나타내는 변수
 
 public:
     TetrisGame();
@@ -20,4 +19,6 @@ public:
     {
         return gameBoard.getBoard();
     }
+
+    bool isGameOver();
 };

@@ -3,13 +3,11 @@
 TetrisGame::TetrisGame()
 {
     gameBoard = GameBoard();
-    isplaying = false;
 }
 
 void TetrisGame::initGame()
 {
     gameBoard.clearBoard();
-    isplaying = true;
 }
 
 void TetrisGame::moveBlock(int direction)
@@ -20,4 +18,9 @@ void TetrisGame::moveBlock(int direction)
 void TetrisGame::rotateBlock()
 {
     gameBoard.rotateBlock();
+}
+
+bool TetrisGame::isGameOver()
+{
+    return gameBoard.isOver();
 }

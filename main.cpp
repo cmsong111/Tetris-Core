@@ -47,6 +47,12 @@ int main()
             }
             cout << endl;
         }
+
+        if (game.isGameOver())
+        {
+            cout << "Game Over" << endl;
+            break;
+        }
     }
     return 0;
 }

@@ -183,6 +183,12 @@ void GameBoard::loadNextBlock()
     currentX = 4;
     currentY = 0;
     nextBlock = Block();
+
+    // 다음 블록이 생성되었을 때 충돌이 일어나면 게임 오버
+    if (isCollision())
+    {
+        isGameOver = true;
+    }
 }
 
 int GameBoard::checkLine()
@@ -222,6 +228,23 @@ void GameBoard::moveLine(int y)
         for (int x = 0; x < BOARD_WIDTH; x++)
         {
             board[i * BOARD_WIDTH + x] = board[(i - 1) * BOARD_WIDTH + x];
+        }
+    }
+}
+
+bool GameBoard::isOver()
+{
+    return isGameOver;
+}
+
+void GameBoard::checkGameOver()
+{
+    for (int x = 0; x < BOARD_WIDTH; x++)
+    {
+        if (board[x] != 0)
+        {
+            isGameOver = true;
+            return;
         }
     }
 }
