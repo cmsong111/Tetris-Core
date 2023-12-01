@@ -24,3 +24,13 @@ bool TetrisGame::isGameOver()
 {
     return gameBoard.isOver();
 }
+
+Block TetrisGame::getNextBlock()
+{
+    return gameBoard.getNextBlock();
+}
+
+int *TetrisGame::getBoard()
+{
+    return gameBoard.getBoard();
+}

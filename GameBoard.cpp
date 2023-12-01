@@ -58,6 +58,7 @@ void GameBoard::moveBlock(int direction)
     {
         fixToBoard();
         loadNextBlock();
+        return;
     }
     else if (isCollision(direction))
     {
@@ -173,7 +174,6 @@ void GameBoard::fixToBoard()
         moveLine(line);
         line = checkLine();
     }
-    loadNextBlock();
 }
 
 void GameBoard::loadNextBlock()
@@ -247,4 +247,9 @@ void GameBoard::checkGameOver()
             return;
         }
     }
+}
+
+Block GameBoard::getNextBlock()
+{
+    return nextBlock;
 }

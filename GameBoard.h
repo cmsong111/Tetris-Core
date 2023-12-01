@@ -32,4 +32,5 @@ public:
     void rotateBlock();                // 블록을 회전시키는 함수
     void moveBlock(int direction = 0); // Down(Defalut) = 0, Left = 1, Right = 2, UP(DEBUG) = 3
     bool isOver();                     // 게임이 끝났는지 확인하는 함수
+    Block getNextBlock();              // 다음 블록을 반환하는 함수
 };
