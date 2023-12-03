@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    TetrisGame game;
+    TetrisGame &game = TetrisGame::getIncetance();
 
     string input;
 

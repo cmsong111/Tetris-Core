@@ -7,9 +7,16 @@ class TetrisGame
 {
 private:
     GameBoard gameBoard; // 게임 보드를 나타내는 변수
+    TetrisGame();
+    TetrisGame(const TetrisGame& ref) {}
+    TetrisGame& operator=(const TetrisGame& ref) {}
+    ~TetrisGame() {}
 
 public:
-    TetrisGame();
+  static TetrisGame& getIncetance() {
+        static TetrisGame s;
+        return s;
+    }
 
     void initGame();                   // 게임을 초기화하는 함수
     void moveBlock(int direction = 0); // Down(Defalut) = 0, Left = 1, Right = 2, UP(DEBUG) = 3
