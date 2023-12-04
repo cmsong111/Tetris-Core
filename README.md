@@ -42,3 +42,9 @@ g++ -fdiagnostics-color=always -g main.cpp  Block.cpp  GameBoard.cpp TetrisGame.
 ## 실행 결과
 
 ![image](/img/screen_recoard.gif)
+
+## 적용 프로젝트
+
+[TetrisGame](https://github.com/LEEJiMin003/TETRIS-GAME)
+
+![image](/img/Tetris_game.gif)
